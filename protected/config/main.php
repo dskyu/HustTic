@@ -14,6 +14,7 @@ return array(
 	),
 	
 	'defaultController'=>'Site',
+	
 	'components'=>array(
 		'urlManager'=>array(
 			'showScriptName'=>false,
@@ -34,5 +35,19 @@ return array(
 			'charset' => 'utf8',
 			'tablePrefix' => '',
 		),
-	),
+		
+        'log'=>array(
+            'class'=>'CLogRouter',
+            'routes'=>array(
+                array(
+                    'class'=>'CWebLogRoute',
+                ),
+            ),
+        ),
+    ),
+	
+	
+    // application-level parameters that can be accessed
+	// using Yii::app()->params['paramName']
+	'params'=>require(dirname(__FILE__).'/params.php'),
 );

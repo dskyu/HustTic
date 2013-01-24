@@ -1,5 +1,5 @@
 <?php
-
+defined('YII DEBUG') or define('YII DEBUG',true);
 $config=dirname(__FILE__).'/protected/config/main.php';
 require_once(dirname(__FILE__).'/../yii/framework/yii.php');
 
