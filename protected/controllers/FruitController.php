@@ -1,6 +1,6 @@
 <?php
 
-class FruitController extends CController
+class FruitController extends Controller
 {
 
 	public function actionIndex()

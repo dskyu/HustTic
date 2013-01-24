@@ -19,7 +19,7 @@ return array(
 			'class'=>'system.gii.GiiModule',
 			'password'=>'111111',  
              //ipFilters用于所在服务器不在本机的情况需开启  
-          // 'ipFilters'=>array('192.168.1.10','::1'), s
+          // 'ipFilters'=>array('192.168.1.10','::1'),
           ),
 		'manage'=>array(
          ),
@@ -38,6 +38,11 @@ return array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
 		),
+		
+		'errorHandler'=>array(
+			'errorAction'=>'error/error'
+		),
+		
 		'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=husttic',
 			'emulatePrepare' => true,

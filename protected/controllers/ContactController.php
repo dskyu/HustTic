@@ -1,6 +1,6 @@
 <?php
 
-class ContactController extends CController
+class ContactController extends Controller
 {
 	public function actionIndex()
 	{

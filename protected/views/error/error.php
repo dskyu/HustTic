@@ -5,7 +5,7 @@ $this->breadcrumbs=array(
 );
 ?>
 
-<h2>Error <?php echo $code; ?></h2>
+<b>Error <?php echo $code; ?></b>
 
 <div class="error">
 <?php echo CHtml::encode($message); ?>

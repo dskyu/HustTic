@@ -1,6 +1,6 @@
 drop database if exists husttic;
 create database husttic;
-use husttic
+use husttic;
 
 
 DROP TABLE IF EXISTS `group`;

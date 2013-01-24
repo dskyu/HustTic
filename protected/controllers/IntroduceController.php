@@ -1,6 +1,6 @@
 <?php
 
-class IntroduceController extends CController
+class IntroduceController extends Controller
 {
 
 	public function actionIndex()
