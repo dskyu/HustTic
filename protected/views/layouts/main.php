@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Hangman Game</title>
+<title><?php echo Yii::app()->params['title'];?></title>
 
 <link href="<?php echo Yii::app()->request->baseUrl;?>/public/css/reset.css" type="text/css" rel="stylesheet" media="screen"/>
 <link href="<?php echo Yii::app()->request->baseUrl;?>/public/css/contact.css" type="text/css" rel="stylesheet" media="screen"/>
@@ -61,7 +61,7 @@ document.getElementById("tabmain2").className="tabpic2_hover";
     	<?php echo $content; ?>
     </div>
     
-    <div id="footer"><span>Copyright © 2011-2012 HuaZhong University of Science and Technology Tencent Innovation Club.All rights reserved. Support by Web&Duio</span> </div>
+    <div id="footer"><span><?php echo Yii::app()->params['copyrightInfo'];?></span> </div>
   </div>
   <!-- end of middle -->
 </div>

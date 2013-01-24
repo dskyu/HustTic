@@ -2,7 +2,6 @@
 
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'HustTic官网',
 	 
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -14,6 +13,18 @@ return array(
 	),
 	
 	'defaultController'=>'Site',
+	
+	'modules'=>array(
+		'gii'=>array(  
+			'class'=>'system.gii.GiiModule',
+			'password'=>'111111',  
+             //ipFilters用于所在服务器不在本机的情况需开启  
+          // 'ipFilters'=>array('192.168.1.10','::1'), s
+          ),
+		'manage'=>array(
+         ),
+         
+	),
 	
 	'components'=>array(
 		'urlManager'=>array(
