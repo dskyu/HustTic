@@ -1,0 +1,91 @@
+@charset "utf-8";
+/* CSS Document */
+#mainbar{
+	background:url(../images/mainbar.jpg);
+	width:184px;
+	height:234px;
+	margin-top:20px;
+}
+#main_container{
+	text-align:center;
+}
+.mainbar_text{
+  font-family:Arial,微软雅黑;
+  font-size:12px;
+  padding:10px 20px;
+}
+.mainbar_text span{
+display:inline-block;
+margin-top:15px;
+margin-bottom:15px;
+margin-left:8px;
+margin-right:6px;
+}
+.mainbar_text a{
+	margin-left:10px;
+	color:#ff0080;
+	font-weight:bold;
+}
+.mainbar_text a:hover{
+	border-bottom:1px dotted;
+}
+.mainbar_write{
+	height:20px;
+	font-size:14px;
+	color:#F36;
+	width:145px;
+	border:1px #ccc solid;
+}
+.mainbar_rem{
+	margin:10px 8px;
+}
+.mainbar_btn{
+  margin:10px;
+}
+
+.mainbar_s{
+  padding:15px;
+  margin-right:5px;
+  margin-left:5px;
+  margin-bottom:5px;
+}
+.mainbar_submit{
+	background:url(../images/submit.png);
+	width:74px;
+	height:31px;
+	border:0;
+	margin-top:10px;
+	margin-left:33px;
+}
+.mainbar_submit:hover{
+	background:url(../images/submit_hover.png);
+}
+
+#mainbar img.person{
+	width:110px;
+	height:110px;
+	margin-top:18px;
+	margin-bottom:6px;
+}
+.person_tip{
+	position:relative
+}
+.tips{
+	display:none;
+}
+.person_tip:hover .tips{
+	display:block;
+	background:url(../images/tips.png);
+	position:absolute;
+	width:265px;
+	height:175px;
+	margin-top:-30px;
+	margin-left:120px;
+}
+img.bar_ico{
+	width:14px;
+	height:14px;
+	margin-left:8px;
+	margin-right:2px;
+}
+

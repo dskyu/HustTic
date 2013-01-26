@@ -1,0 +1,201 @@
+@CHARSET "UTF-8";
+
+table{
+ 	border:none;
+    font-size: 14px;
+    height: 26px;
+    line-height: 16px;
+    padding: 4px 2px 2px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+table td{
+	line-height:40px;
+}
+table td.first{
+	text-align:right;
+	padding-right:5px;
+	color:#9CA27E;
+}
+table td.tip_img{
+	padding:0 5px;
+	text-align:center;
+}
+
+.logintable{
+	background:url("images/login.png") no-repeat;
+	height:188;
+	width:470;
+}
+
+.logintable td{
+	line-height:40px;
+	color:#1d68ad;
+}
+
+
+.logintable input{
+	border:1px solid #333;
+	font-weight:bold;
+	font-size:15px;
+	height:18px;
+	width:200px;
+}
+
+.listtable
+{
+	text-align:center;
+	border:0px;
+	color:#63F;
+	width:500px;
+	height:300px
+}
+
+
+.listtable td
+{
+	line-height:20px;
+}
+
+.counttable
+{
+	border:0px;
+	height:20px;
+	width:500px;
+	color:#000;
+	font-weight:lighter;
+}
+
+.counttable input
+{
+	border:1px solid #000;
+	font-size:14px;
+	height:18px;
+	width:45px;
+}
+
+.deletetable
+{
+	text-align: center;
+	border:1px solid #000;
+	color:#63F;
+	width:500px;
+}
+
+.deletetable td
+{
+	line-height:20px;
+}
+
+.deletetable input
+{
+	width:auto;
+	border:0px;
+}
+
+#selectAll,#selectAnother,#deleteuser,#selectNone
+{
+	border:1px solid #000;
+	font-size:14px;
+	height:18px;
+	width:60px;
+}
+
+#sreachform
+{
+	color:#000;
+}
+
+#sreachform input
+{
+	border:1px solid #000;
+	font-size:14px;
+	width:150px;
+	height:20px;
+	font-weight:bold;
+}
+
+
+
+#button{
+	border:0px;
+	background:url("images/button11.png") no-repeat;
+	height:67px;
+	width:76px;
+	
+}
+label h1{
+	background:#adf;
+	color:#007bbb;
+	font-size:14px;
+	line-height:30px;
+	text-indent:20px;
+	border-bottom:1px solid #369;
+}
+
+label{
+	font-size:15px;	
+	padding-right:5px;
+}
+input{
+	border:1px solid #ff9900;
+	width:200px;
+	height:24px;
+	font-size:20px;
+}
+
+.button {
+	border:1px solid #ff9900;
+	width:50px;
+	height:24px;
+	font-size:20px;
+}
+textarea{
+	width:200px;
+	font-size:20px;
+}
+#sub,#sub:hover{
+	width:130px;
+	height:32px;
+	line-height:32px;
+	text-align:center;
+	color:#fff;
+	font-size:16px;
+	border:none;
+	background:url("images/button.gif") no-repeat;
+}
+#sub:hover{
+	background:url("images/button_1.gif") no-repeat;
+}
+p {
+	float:left;
+}
+.file {
+	position:absolute;
+	top:20px;
+	right:300px;
+	top:0;
+	right:73px;
+	width:0px;
+	height:30px;
+	filter:alpha(opacity=0);
+	-moz-opacity:0;opacity:0;
+}
+#txt {
+	height:24px;
+	width:123px;
+	margin:1px
+}
+
+#logo {
+	width:200px;
+	font-size:15px;
+}
+#ii {
+	width:70px;
+	height:26px;
+	margin-left:3px;
+	font-size:14px;
+}
+

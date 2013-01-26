@@ -1,0 +1,53 @@
+@charset "utf-8";
+/* CSS Document */
+.Container {
+	position: absolute;
+	width: 700px;
+	height: 173px;
+}
+#Scroller-1 {
+	position: absolute;
+	overflow: hidden;
+	width: 700px;
+	height: 173px;
+}
+.Scroller-Container {
+	position: absolute;
+}
+.Scrollbar-Track {
+	float:right;
+	width: 10px;
+	height: 125px;
+	margin-top:20px;
+	margin-right:20px;
+	position:relative;
+	background-color: #CCC;
+}
+.Scrollbar-Handle {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 10px;
+	height: 30px;
+	background-color: #666;
+}
+#teamscoll {
+	width:700px;
+	margin-left:25px;
+	margin-top:10px;
+}
+.pic {
+	width:100px;
+	height:150px;
+	padding:20px;
+	float:left;
+	text-align:center;
+}
+.pic img {
+	width:80px;
+	height:80px;
+	margin-bottom:20px;
+}
+.pic span {
+	display:block;
+}

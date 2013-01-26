@@ -1,0 +1,105 @@
+@charset "utf-8";
+/* CSS Document */
+#content_cbottom h1{
+	font-size:18px;
+	color:#000;
+	text-align:center;
+	padding-top:40px;
+	padding-bottom:10px;
+	margin:0 70px;
+	border-bottom:1px #F69 dotted;
+}
+ #form_text{
+  font-family:Arial,微软雅黑;
+   width:80%;
+   margin:1.5em auto 0 auto;
+   padding:2em;
+   border:0;
+   
+  /* background-color:#666;*/
+  }
+ #form_text1 #form_text2{
+	  margin:0 auto;
+	  border:0;
+	  font-size:14px;
+   }
+#form_text h3{
+	font-size:16px;
+	color:#666;
+	padding-bottom:0.5em;
+	padding-top:0.5em;
+	padding-left:10em;
+	margin-bottom:1em;
+	/*background-color:#6F6;*/
+ }
+
+ #form_text1{
+	/*  background-color: #339;*/
+	  margin-bottom:1em;
+	  padding-bottom:2em;
+	 
+ }
+ #form_text2{
+	/* background-color:#930;*/
+	   padding-bottom:2em;
+ }
+#form_text ol li{
+	 line-height:3em;
+	 
+}
+#form_text input{
+	height:1.6em;
+	border:1px solid #ccc;
+	width:150px;
+	color:#333;
+  }
+ #form_text input:focus{
+	  background:rgb(237,237,237);
+  }
+#form_text .sex{
+	border:none;
+	width:20px;
+	height:12px;
+	
+}
+#form_text .sex:focus{
+	background:none;
+}
+#form_text ol li label{
+	 margin-right:1em;
+     color:#333;
+	text-align:right;
+	width:100px;
+}
+/*#form_text fieldset{
+	margin:1.5em auto 0 auto;
+	padding:0;
+}*/
+#form_text2 textarea{
+	overflow:hidden;
+	border:1px solid #ccc;
+}
+#form_text2 textarea:focus{
+	 background:rgb(237,237,237);
+}
+#area{
+	margin-top:0.8em;
+	 
+}
+#form_submit{
+	text-align:center;
+	/*background-color:#0F0;*/
+}
+#form_submit input{
+    width:74px;
+	height:31px;
+	border:0;
+	margin-top:10px;
+	 
+}
+#form_line{
+	border-top:1px solid #ccc;
+	width:80%;
+	margin:0 auto;
+}
+	
