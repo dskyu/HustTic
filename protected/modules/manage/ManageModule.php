@@ -12,7 +12,7 @@ class ManageModule extends CWebModule
 			'manage.models.*',
 			'manage.components.*',
 		));
-
+		Yii::app()->user->loginUrl = Yii::app()->homeUrl.'manage/user/login';
 	}
 
 	public function beforeControllerAction($controller, $action)

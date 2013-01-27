@@ -43,11 +43,11 @@ document.getElementById("tabmain2").className="tabpic2_hover";
       <div id="tabs">
         <div class="nav">
           <ul>
-            <li class="title_home"><a href="<?php echo Yii::app()->homeUrl;?>/"></a></li>
-            <li class="title_view"><a href="<?php echo Yii::app()->homeUrl;?>/introduce"></a></li>
-            <li class="title_galledy"><a href="<?php echo Yii::app()->homeUrl;?>/fruit"></a></li>
-            <li class="title_department"><a href="<?php echo Yii::app()->homeUrl;?>/member"></a></li>
-            <li class="title_contact"><a href="<?php echo Yii::app()->homeUrl;?>/contact"></a></li>
+            <li class="title_home"><a href="<?php echo Yii::app()->homeUrl;?>"></a></li>
+            <li class="title_view"><a href="<?php echo Yii::app()->homeUrl;?>introduce"></a></li>
+            <li class="title_galledy"><a href="<?php echo Yii::app()->homeUrl;?>fruit"></a></li>
+            <li class="title_department"><a href="<?php echo Yii::app()->homeUrl;?>member"></a></li>
+            <li class="title_contact"><a href="<?php echo Yii::app()->homeUrl;?>contact"></a></li>
           </ul>
         </div>
         <!-- end of nav -->

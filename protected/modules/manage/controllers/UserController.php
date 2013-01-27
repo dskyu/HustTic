@@ -28,9 +28,6 @@ class UserController extends Controller
 				'actions'=>array('index','view','create','update','logout','delete'),
 				'users'=>array('@'),
 			),
-			array('deny',  // deny all users
-				'users'=>array('*'),
-			),
 		);
 	}
 
@@ -130,6 +127,7 @@ class UserController extends Controller
 
 	public function actionLogin()
 	{
+	
 		$model=new LoginForm;
 
 		// if it is ajax validation request
@@ -138,7 +136,7 @@ class UserController extends Controller
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
-
+		
 		// collect user input data
 		if(isset($_POST['LoginForm']))
 		{
