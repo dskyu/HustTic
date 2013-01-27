@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2013 年 01 月 26 日 23:44
+-- 生成日期: 2013 年 01 月 26 日 23:11
 -- 服务器版本: 5.5.11-log
 -- PHP 版本: 5.2.17
 
@@ -36,8 +36,10 @@ CREATE TABLE IF NOT EXISTS `tic_announce` (
   `title` varchar(255) NOT NULL,
   `description` text NOT NULL,
   `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+  PRIMARY KEY (`id`),
+  KEY `dest_id` (`dest_id`),
+  KEY `source_id` (`source_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -52,8 +54,10 @@ CREATE TABLE IF NOT EXISTS `tic_behavior` (
   `content` text,
   `level` int(1) NOT NULL,
   `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+  PRIMARY KEY (`id`),
+  KEY `source_id` (`source_id`),
+  KEY `dest_id` (`dest_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -66,7 +70,7 @@ CREATE TABLE IF NOT EXISTS `tic_group` (
   `name` varchar(255) NOT NULL,
   `description` text,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -82,8 +86,10 @@ CREATE TABLE IF NOT EXISTS `tic_message` (
   `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `state` int(1) NOT NULL DEFAULT '0',
   `type` int(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+  PRIMARY KEY (`id`),
+  KEY `source_id` (`source_id`),
+  KEY `dest_id` (`dest_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -100,7 +106,7 @@ CREATE TABLE IF NOT EXISTS `tic_project` (
   `thumbnail_url` varchar(255) DEFAULT NULL,
   `ori_url` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -125,8 +131,9 @@ CREATE TABLE IF NOT EXISTS `tic_user` (
   `renren` varchar(255) DEFAULT NULL,
   `qq` varchar(255) DEFAULT NULL,
   `tel` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+  PRIMARY KEY (`id`),
+  KEY `group_id` (`group_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -138,8 +145,10 @@ CREATE TABLE IF NOT EXISTS `tic_user_group` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
   `group_id` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+  PRIMARY KEY (`id`),
+  KEY `user_id` (`user_id`),
+  KEY `group_id` (`group_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -151,8 +160,55 @@ CREATE TABLE IF NOT EXISTS `tic_user_project` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
   `project_id` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+  PRIMARY KEY (`id`),
+  KEY `user_id` (`user_id`),
+  KEY `project_id` (`project_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+--
+-- 限制导出的表
+--
+
+--
+-- 限制表 `tic_announce`
+--
+ALTER TABLE `tic_announce`
+  ADD CONSTRAINT `tic_announce_ibfk_2` FOREIGN KEY (`source_id`) REFERENCES `tic_user` (`id`),
+  ADD CONSTRAINT `tic_announce_ibfk_1` FOREIGN KEY (`dest_id`) REFERENCES `tic_user` (`id`);
+
+--
+-- 限制表 `tic_behavior`
+--
+ALTER TABLE `tic_behavior`
+  ADD CONSTRAINT `tic_behavior_ibfk_1` FOREIGN KEY (`source_id`) REFERENCES `tic_user` (`id`),
+  ADD CONSTRAINT `tic_behavior_ibfk_2` FOREIGN KEY (`dest_id`) REFERENCES `tic_user` (`id`);
+
+--
+-- 限制表 `tic_message`
+--
+ALTER TABLE `tic_message`
+  ADD CONSTRAINT `tic_message_ibfk_1` FOREIGN KEY (`source_id`) REFERENCES `tic_user` (`id`),
+  ADD CONSTRAINT `tic_message_ibfk_2` FOREIGN KEY (`dest_id`) REFERENCES `tic_user` (`id`);
+
+--
+-- 限制表 `tic_user`
+--
+ALTER TABLE `tic_user`
+  ADD CONSTRAINT `tic_user_ibfk_1` FOREIGN KEY (`group_id`) REFERENCES `tic_group` (`id`);
+
+--
+-- 限制表 `tic_user_group`
+--
+ALTER TABLE `tic_user_group`
+  ADD CONSTRAINT `tic_user_group_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `tic_user` (`id`),
+  ADD CONSTRAINT `tic_user_group_ibfk_2` FOREIGN KEY (`group_id`) REFERENCES `tic_group` (`id`);
+
+--
+-- 限制表 `tic_user_project`
+--
+ALTER TABLE `tic_user_project`
+  ADD CONSTRAINT `tic_user_project_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `tic_user` (`id`),
+  ADD CONSTRAINT `tic_user_project_ibfk_2` FOREIGN KEY (`project_id`) REFERENCES `tic_project` (`id`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

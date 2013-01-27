@@ -1,42 +1,49 @@
 <?php
+$this->pageTitle=Yii::app()->name . ' - Login';
 $this->breadcrumbs=array(
-	$this->module->id,
+	'Login',
 );
 ?>
 
-<div id="welcome">
-	<table class = "logintable">
-		
-        <?php if (!isset($root['id'])){?> 
-        
-        <form method="post" action="<?php echo Yii::app()->request->baseUrl?>/manage/default/login">
-        <tr>
-        	<td >&nbsp;  </td>
-        	<td width="230px" > <h2 >&nbsp;&nbsp;&nbsp;<b>管理员登录</b> </h2> </td>
-            <td rowspan="3" valign="bottom" > <input name="" id="button" type="submit"  value=""  />   </td>
-        </tr>
-        <tr>
-        	<td align="center" > <label>账&nbsp;号:</label> </td>
-            <td> 
-                <input name="rootname" type="text" id="rootname" />
-                
-            </td>
-          </tr>
-         <tr>
-            <td align="center"> <label>密&nbsp;码:</label> </td>
-            <td> 
-                <input name="password" type="password" id="password" />
-               
-             </td>
-          </tr>
-          <tr height="50px">
-            <td colspan="3">
-           
-            </td>
-          </tr>
-        </form>
-    </table>
-    
+<h1>Login</h1>
 
-    <?php }?>
-</div>
+<p>Please fill out the following form with your login credentials:</p>
+
+<div class="form">
+<?php $form=$this->beginWidget('CActiveForm', array(
+	'id'=>'login-form',
+	'enableClientValidation'=>true,
+	'clientOptions'=>array(
+		'validateOnSubmit'=>true,
+	),
+)); ?>
+
+	<p class="note">Fields with <span class="required">*</span> are required.</p>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'username'); ?>
+		<?php echo $form->textField($model,'username'); ?>
+		<?php echo $form->error($model,'username'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'password'); ?>
+		<?php echo $form->passwordField($model,'password'); ?>
+		<?php echo $form->error($model,'password'); ?>
+		<p class="hint">
+			Hint: You may login with <tt>demo/demo</tt> or <tt>admin/admin</tt>.
+		</p>
+	</div>
+
+	<div class="row rememberMe">
+		<?php echo $form->checkBox($model,'rememberMe'); ?>
+		<?php echo $form->label($model,'rememberMe'); ?>
+		<?php echo $form->error($model,'rememberMe'); ?>
+	</div>
+
+	<div class="row buttons">
+		<?php echo CHtml::submitButton('Login'); ?>
+	</div>
+
+<?php $this->endWidget(); ?>
+</div><!-- form -->

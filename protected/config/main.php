@@ -49,7 +49,7 @@ return array(
 			'username' => 'root',
 			'password' => '111111',
 			'charset' => 'utf8',
-			'tablePrefix' => '',
+			'tablePrefix' => 'tic_',
 		),
 		
         'log'=>array(
