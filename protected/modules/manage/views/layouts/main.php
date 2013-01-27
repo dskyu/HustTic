@@ -12,12 +12,14 @@
 <?php echo $this->renderPartial("application.modules.manage.views.layouts.header"); ?>
 <div id="body_area">
 	<div class="left">
-      	
+		<?php echo $this->renderPartial("application.modules.manage.views.".$this->id.".left"); ?>
 	</div>
 	<div class="midarea">
 		<?php echo $content; ?>
 	</div>
-	<div class="right"></div>
+	<div class="right">
+		<?php echo $this->renderPartial("application.modules.manage.views.layouts.right"); ?>
+	</div>
 </div>
 <div id="fotter">
 	<?php echo $this->renderPartial("application.modules.manage.views.layouts.footer"); ?>

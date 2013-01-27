@@ -112,6 +112,7 @@ CREATE TABLE IF NOT EXISTS `tic_user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
+  `nickname` varchar(255) NOT NULL,
   `level` int(1) DEFAULT '0',
   `description` text,
   `group_id` int(11) NOT NULL,
@@ -127,6 +128,15 @@ CREATE TABLE IF NOT EXISTS `tic_user` (
   `tel` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+INSERT INTO `tic_user` (`id`, `username`, `password`, `nickname`, `level`, `description`, `group_id`, `birthday`, `sex`, `otherskill`, `thumbnail_url`, `ori_url`, `hobby`, `weibo`, `renren`, `qq`, `tel`) VALUES
+(1, '111', '432', '', 0, NULL, 12, '2013-01-26 15:48:21', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '111'),
+(2, 'abc', '96e79218965eb72c92a549dd5a330112', '朝秦暮楚', 0, NULL, 12, '2013-01-27 15:04:59', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '111'),
+(3, '111', '432', '', 0, NULL, 12, '2013-01-26 15:50:03', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '111'),
+(4, '111', '432', '', 0, NULL, 12, '2013-01-26 15:50:15', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '111'),
+(5, '111', '432', '', 0, NULL, 12, '2013-01-26 15:50:16', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '111'),
+(6, '111', '432', '', 0, NULL, 12, '2013-01-26 15:50:17', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '111'),
+(7, '111', '432', '', 0, NULL, 12, '2013-01-26 15:50:18', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '111');
 
 -- --------------------------------------------------------
 

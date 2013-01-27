@@ -1,3 +1,10 @@
+<?php
+$this->pageTitle=Yii::app()->name.' - 联系我们';
+$this->breadcrumbs=array(
+	'联系我们',
+);
+?>
+
 <link href="<?php echo Yii::app()->homeUrl;;?>/public/css/contact.css" type="text/css" rel="stylesheet" media="screen"/>
 <div id="content1"> <a href="#"><img id="changebj" src="<?php echo Yii::app()->homeUrl;;?>/public/images/changebj.png"/></a> <img id="id" src="<?php echo Yii::app()->homeUrl;;?>/public/images/contact/bj.jpg"/> </div>
     <!-- end of content1 -->

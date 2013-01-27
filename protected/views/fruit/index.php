@@ -1,3 +1,10 @@
+<?php
+$this->pageTitle=Yii::app()->name.' - 作品';
+$this->breadcrumbs=array(
+	'作品',
+);
+?>
+
 <link href="<?php echo Yii::app()->homeUrl;;?>/public/css/galledy.css" type="text/css" rel="stylesheet" media="screen"/>
 <link href="<?php echo Yii::app()->homeUrl;;?>/public/css/galledy_exp.css" type="text/css" rel="stylesheet" media="screen"/>
  <div id="content1"><a href="#"><img id="changebj"

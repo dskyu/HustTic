@@ -1,3 +1,10 @@
+<?php
+$this->pageTitle=Yii::app()->name.' - 成员';
+$this->breadcrumbs=array(
+	'成员',
+);
+?>
+
 <link href="<?php echo Yii::app()->homeUrl;;?>/public/css/department.css" type="text/css" rel="stylesheet" media="screen"/> <div id="content1">       	
             <a href="#"><img id="changebj" src="<?php echo Yii::app()->homeUrl;;?>/public/images/changebj.png"/></a>
             <img id="bj" src="<?php echo Yii::app()->homeUrl;;?>/public/images/department/bj.jpg"/>

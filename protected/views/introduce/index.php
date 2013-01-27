@@ -1,3 +1,9 @@
+<?php
+$this->pageTitle=Yii::app()->name.' - 简介';
+$this->breadcrumbs=array(
+	'简介',
+);
+?>
 
 <link href="<?php echo Yii::app()->homeUrl;;?>/public/css/summary.css" type="text/css" rel="stylesheet" media="screen"/>
    <div id="content1">       	

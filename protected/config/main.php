@@ -2,7 +2,8 @@
 
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	 
+	'name'=>'HustTic官网',
+
 	// preloading 'log' component
 	'preload'=>array('log'),
 	
@@ -19,7 +20,7 @@ return array(
 			'class'=>'system.gii.GiiModule',
 			'password'=>'111111',  
              //ipFilters用于所在服务器不在本机的情况需开启  
-          // 'ipFilters'=>array('192.168.1.10','::1'),
+           'ipFilters'=>array('127.0.0.1','::1'),
           ),
 		'manage'=>array(
          ),
@@ -55,6 +56,10 @@ return array(
         'log'=>array(
             'class'=>'CLogRouter',
             'routes'=>array(
+				array(
+					'class'=>'CFileLogRoute',
+					'levels'=>'error, warning,info',
+				),
                 array(
                     'class'=>'CWebLogRoute',
                 ),

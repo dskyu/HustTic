@@ -7,6 +7,7 @@
  * @property integer $id
  * @property string $username
  * @property string $password
+ * @property string $nickname
  * @property integer $level
  * @property string $description
  * @property integer $group_id
@@ -49,13 +50,13 @@ class User extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('username, password, group_id, birthday, sex, tel', 'required'),
+			array('username, password, nickname, group_id, birthday, sex, tel', 'required'),
 			array('level, group_id, sex', 'numerical', 'integerOnly'=>true),
-			array('username, password, otherskill, thumbnail_url, ori_url, hobby, weibo, renren, qq, tel', 'length', 'max'=>255),
+			array('username, password, nickname, otherskill, thumbnail_url, ori_url, hobby, weibo, renren, qq, tel', 'length', 'max'=>255),
 			array('description', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, username, password, level, description, group_id, birthday, sex, otherskill, thumbnail_url, ori_url, hobby, weibo, renren, qq, tel', 'safe', 'on'=>'search'),
+			array('id, username, password, nickname, level, description, group_id, birthday, sex, otherskill, thumbnail_url, ori_url, hobby, weibo, renren, qq, tel', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -79,6 +80,7 @@ class User extends CActiveRecord
 			'id' => 'ID',
 			'username' => 'Username',
 			'password' => 'Password',
+			'nickname' => 'Nickname',
 			'level' => 'Level',
 			'description' => 'Description',
 			'group_id' => 'Group',
@@ -109,6 +111,7 @@ class User extends CActiveRecord
 		$criteria->compare('id',$this->id);
 		$criteria->compare('username',$this->username,true);
 		$criteria->compare('password',$this->password,true);
+		$criteria->compare('nickname',$this->nickname,true);
 		$criteria->compare('level',$this->level);
 		$criteria->compare('description',$this->description,true);
 		$criteria->compare('group_id',$this->group_id);
