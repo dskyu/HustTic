@@ -7,10 +7,4 @@ class SiteController extends Controller
 		$this->render(index);
 	}
 	
-	public function actionLogin()
-	{
-		$this->render(index);
-		
-	}
-	
 }

@@ -1,12 +1,12 @@
-<link href="<?php echo Yii::app()->request->baseUrl;;?>/public/css/department.css" type="text/css" rel="stylesheet" media="screen"/> <div id="content1">       	
-            <a href="#"><img id="changebj" src="<?php echo Yii::app()->request->baseUrl;;?>/public/images/changebj.png"/></a>
-            <img id="bj" src="<?php echo Yii::app()->request->baseUrl;;?>/public/images/department/bj.jpg"/>
+<link href="<?php echo Yii::app()->homeUrl;;?>/public/css/department.css" type="text/css" rel="stylesheet" media="screen"/> <div id="content1">       	
+            <a href="#"><img id="changebj" src="<?php echo Yii::app()->homeUrl;;?>/public/images/changebj.png"/></a>
+            <img id="bj" src="<?php echo Yii::app()->homeUrl;;?>/public/images/department/bj.jpg"/>
         </div><!-- end of content1 --> 
         <div id="content2">
                 <div id="patch1">
-                	<img class="title_pic" src="<?php echo Yii::app()->request->baseUrl;;?>/public/images/department/department.jpg"/>
-                    <img  class="b_left" src="<?php echo Yii::app()->request->baseUrl;;?>/public/images/department/border_department.jpg"/>
-                    <img  class="b_right" src="<?php echo Yii::app()->request->baseUrl;;?>/public/images/department/border_department.jpg"/>             
+                	<img class="title_pic" src="<?php echo Yii::app()->homeUrl;;?>/public/images/department/department.jpg"/>
+                    <img  class="b_left" src="<?php echo Yii::app()->homeUrl;;?>/public/images/department/border_department.jpg"/>
+                    <img  class="b_right" src="<?php echo Yii::app()->homeUrl;;?>/public/images/department/border_department.jpg"/>             
                 	<s:iterator value="pager.resultList">
                     	<div class="picshow">
                     	<!-- 图片以后还要从数据库里面提取 -->

@@ -43,6 +43,7 @@ $this->breadcrumbs=array(
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Login'); ?>
+		<?php echo CHtml::link("Register",'manage/user/register'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

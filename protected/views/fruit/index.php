@@ -1,7 +1,7 @@
-<link href="<?php echo Yii::app()->request->baseUrl;;?>/public/css/galledy.css" type="text/css" rel="stylesheet" media="screen"/>
-<link href="<?php echo Yii::app()->request->baseUrl;;?>/public/css/galledy_exp.css" type="text/css" rel="stylesheet" media="screen"/>
+<link href="<?php echo Yii::app()->homeUrl;;?>/public/css/galledy.css" type="text/css" rel="stylesheet" media="screen"/>
+<link href="<?php echo Yii::app()->homeUrl;;?>/public/css/galledy_exp.css" type="text/css" rel="stylesheet" media="screen"/>
  <div id="content1"><a href="#"><img id="changebj"
-	src="<?php echo Yii::app()->request->baseUrl;;?>/public/images/changebj.png" /></a> <img id="bj" src="<?php echo Yii::app()->request->baseUrl;;?>/public/images/galledy/bj.jpg" /> </div>
+	src="<?php echo Yii::app()->homeUrl;;?>/public/images/changebj.png" /></a> <img id="bj" src="<?php echo Yii::app()->homeUrl;;?>/public/images/galledy/bj.jpg" /> </div>
     <!-- end of content1 -->
     <div id="content2">
    
@@ -37,7 +37,7 @@
         <s:set name="floor" value="1" id="i"/>
 		<s:iterator value="pager.resultList">
           	<div class="workshow"><img class="workpic"
-				src="<?php echo Yii::app()->request->baseUrl;;?>/public/images/works/web/01.jpg" />
+				src="<?php echo Yii::app()->homeUrl;;?>/public/images/works/web/01.jpg" />
 		 		<s:url id="url" value="galledyExp">
 		 			<s:param name="index" value="#i"/>
 		 		</s:url>

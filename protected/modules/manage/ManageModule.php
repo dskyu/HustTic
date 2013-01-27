@@ -12,6 +12,7 @@ class ManageModule extends CWebModule
 			'manage.models.*',
 			'manage.components.*',
 		));
+
 	}
 
 	public function beforeControllerAction($controller, $action)

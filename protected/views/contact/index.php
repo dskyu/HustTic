@@ -1,8 +1,8 @@
-<link href="<?php echo Yii::app()->request->baseUrl;;?>/public/css/contact.css" type="text/css" rel="stylesheet" media="screen"/>
-<div id="content1"> <a href="#"><img id="changebj" src="<?php echo Yii::app()->request->baseUrl;;?>/public/images/changebj.png"/></a> <img id="id" src="<?php echo Yii::app()->request->baseUrl;;?>/public/images/contact/bj.jpg"/> </div>
+<link href="<?php echo Yii::app()->homeUrl;;?>/public/css/contact.css" type="text/css" rel="stylesheet" media="screen"/>
+<div id="content1"> <a href="#"><img id="changebj" src="<?php echo Yii::app()->homeUrl;;?>/public/images/changebj.png"/></a> <img id="id" src="<?php echo Yii::app()->homeUrl;;?>/public/images/contact/bj.jpg"/> </div>
     <!-- end of content1 -->
     <div id="content2">
-      <div id="patch1"> <img class="title_pic" src="<?php echo Yii::app()->request->baseUrl;;?>/public/images/contact/contact.jpg"/> <img  class="b_left" src="<?php echo Yii::app()->request->baseUrl;;?>/public/images/department/border_department.jpg"/> <img  class="b_right" src="<?php echo Yii::app()->request->baseUrl;;?>/public/images/department/border_department.jpg"/>
+      <div id="patch1"> <img class="title_pic" src="<?php echo Yii::app()->homeUrl;;?>/public/images/contact/contact.jpg"/> <img  class="b_left" src="<?php echo Yii::app()->homeUrl;;?>/public/images/department/border_department.jpg"/> <img  class="b_right" src="<?php echo Yii::app()->homeUrl;;?>/public/images/department/border_department.jpg"/>
         <h2>最新留言 Latest Message</h2>
         <div id="talkbox">
           <s:set name="floor" value="pager.endIndex" id="i"/>

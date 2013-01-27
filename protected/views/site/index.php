@@ -1,1 +1,1 @@
-<link href="<?php echo Yii::app()->request->baseUrl;?>/public/css/index.css" type="text/css" rel="stylesheet" media="screen"/>
+<link href="<?php echo Yii::app()->homeUrl;?>/public/css/index.css" type="text/css" rel="stylesheet" media="screen"/>

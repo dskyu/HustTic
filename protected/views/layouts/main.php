@@ -4,12 +4,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title><?php echo Yii::app()->params['title'];?></title>
 
-<link href="<?php echo Yii::app()->request->baseUrl;?>/public/css/reset.css" type="text/css" rel="stylesheet" media="screen"/>
-<link href="<?php echo Yii::app()->request->baseUrl;?>/public/css/contact.css" type="text/css" rel="stylesheet" media="screen"/>
-<link href="<?php echo Yii::app()->request->baseUrl;?>/public/css/share.css" type="text/css" rel="stylesheet" media="screen"/>
-<link href="<?php echo Yii::app()->request->baseUrl;?>/public/css/tab.css" type="text/css" rel="stylesheet" media="screen"/>
+<link href="<?php echo Yii::app()->homeUrl;?>/public/css/reset.css" type="text/css" rel="stylesheet" media="screen"/>
+<link href="<?php echo Yii::app()->homeUrl;?>/public/css/contact.css" type="text/css" rel="stylesheet" media="screen"/>
+<link href="<?php echo Yii::app()->homeUrl;?>/public/css/share.css" type="text/css" rel="stylesheet" media="screen"/>
+<link href="<?php echo Yii::app()->homeUrl;?>/public/css/tab.css" type="text/css" rel="stylesheet" media="screen"/>
 
-<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl;?>/public/js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->homeUrl;?>/public/js/jquery-1.4.4.min.js"></script>
 <script>
 function woaicssq(num){
 for(var id = 1;id<=2;id++ )
@@ -43,11 +43,11 @@ document.getElementById("tabmain2").className="tabpic2_hover";
       <div id="tabs">
         <div class="nav">
           <ul>
-            <li class="title_home"><a href="<?php echo Yii::app()->request->baseUrl;?>/"></a></li>
-            <li class="title_view"><a href="<?php echo Yii::app()->request->baseUrl;?>/introduce"></a></li>
-            <li class="title_galledy"><a href="<?php echo Yii::app()->request->baseUrl;?>/fruit"></a></li>
-            <li class="title_department"><a href="<?php echo Yii::app()->request->baseUrl;?>/member"></a></li>
-            <li class="title_contact"><a href="<?php echo Yii::app()->request->baseUrl;?>/contact"></a></li>
+            <li class="title_home"><a href="<?php echo Yii::app()->homeUrl;?>/"></a></li>
+            <li class="title_view"><a href="<?php echo Yii::app()->homeUrl;?>/introduce"></a></li>
+            <li class="title_galledy"><a href="<?php echo Yii::app()->homeUrl;?>/fruit"></a></li>
+            <li class="title_department"><a href="<?php echo Yii::app()->homeUrl;?>/member"></a></li>
+            <li class="title_contact"><a href="<?php echo Yii::app()->homeUrl;?>/contact"></a></li>
           </ul>
         </div>
         <!-- end of nav -->
