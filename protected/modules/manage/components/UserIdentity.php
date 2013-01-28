@@ -7,7 +7,6 @@
  */
 class UserIdentity extends CUserIdentity
 {
-	const ERROR_USERNAME_NOTEXIST = 3;
 	/**
 	 * Authenticates a user.
 	 * The example implementation makes sure if the username and password
@@ -20,7 +19,7 @@ class UserIdentity extends CUserIdentity
 	{
 		$user = User::model()->findByAttributes(array('username'=>$this->username));
 		if(!$user){
-			$this->errorCode=self::ERROR_USERNAME_NOTEXIST;
+			$this->errorCode=self::ERROR_USERNAME_INVALID;
 			return !$this->errorCode;
 		}
 		$uesr = $user->getAttributes();
