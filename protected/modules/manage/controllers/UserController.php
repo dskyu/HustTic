@@ -1,5 +1,6 @@
 <?php
 
+
 class UserController extends Controller
 {
 	public function actions()
@@ -37,7 +38,7 @@ class UserController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('register','login'),
+				'actions'=>array('register','login','captcha'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -147,6 +148,8 @@ class UserController extends Controller
 			$model->attributes=$_POST['RegisterForm'];
 			if($model->validate())
 			{
+				print_r($model->attributes);die();
+				User::model()->insert($model->attributes);
 				Yii::app()->user->setFlash('Register','Thank you for contacting us. We will respond to you as soon as possible.');
 				$this->refresh();
 			}

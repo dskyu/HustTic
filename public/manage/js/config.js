@@ -1,4 +1,4 @@
-var webRoot = "/cook";
+var webRoot = "/husttic";
 
 $(document).ready(function(){
 	init_date_selector();

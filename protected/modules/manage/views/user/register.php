@@ -66,7 +66,8 @@ $this->breadcrumbs=array(
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'sex'); ?>
-		<?php echo $form->textField($model,'sex'); ?>
+		<?php echo $form->radioButtonList($model,'sex', 
+					array('2'=>'中性','1'=>'男','0'=>'女'), array('separator'=>'&nbsp;')); ?>
 		<?php echo $form->error($model,'sex'); ?>
 	</div>
 
