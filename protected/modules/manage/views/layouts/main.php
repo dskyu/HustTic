@@ -5,7 +5,6 @@
 
 <script type="text/javascript" src="<?php echo Yii::app()->homeUrl.'public/manage/'?>js/jquery-1.5.1.js"></script>
 <link href="<?php echo Yii::app()->homeUrl.'public/manage'?>/system/css/system.css" type="text/css" rel="stylesheet" media="screen"/>
-<link href="<?php echo Yii::app()->homeUrl.'public/manage'?>/css/share.css" type="text/css" rel="stylesheet" media="screen"/>
 <link href="<?php echo Yii::app()->homeUrl.'public/manage'?>/css/jquery.datepick.css" type="text/css" rel="stylesheet" media="screen"/>
 </head>
 <body>

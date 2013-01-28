@@ -7,6 +7,7 @@
  */
 class UserIdentity extends CUserIdentity
 {
+	const ERROR_USERNAME_NOTEXIST = 3;
 	/**
 	 * Authenticates a user.
 	 * The example implementation makes sure if the username and password
@@ -17,7 +18,12 @@ class UserIdentity extends CUserIdentity
 	 */
 	public function authenticate()
 	{
-		$user = User::model()->findByAttributes(array('username'=>$this->username))->getAttributes();
+		$user = User::model()->findByAttributes(array('username'=>$this->username));
+		if(!$user){
+			$this->errorCode=self::ERROR_USERNAME_NOTEXIST;
+			return !$this->errorCode;
+		}
+		$uesr = $user->getAttributes();
 		Yii::log(isset($user['username'])?$user['username']:'no user' , "info");
 		if(!isset($user['username']))
 			$this->errorCode=self::ERROR_USERNAME_INVALID;

@@ -142,19 +142,25 @@ class UserController extends Controller
 	
 	public function actionRegister()
 	{
-		$model=new RegisterForm;
+		$form=new RegisterForm;
 		if(isset($_POST['RegisterForm']))
 		{
-			$model->attributes=$_POST['RegisterForm'];
-			if($model->validate())
+			$form->attributes=$_POST['RegisterForm'];
+			if($form->validate())
 			{
-				print_r($model->attributes);die();
-				User::model()->insert($model->attributes);
-				Yii::app()->user->setFlash('Register','Thank you for contacting us. We will respond to you as soon as possible.');
+				$model=new User;
+				$_POST['RegisterForm']['password']=md5($_POST['RegisterForm']);
+				$model->attributes=$_POST['RegisterForm'];
+				if ($model->save())
+				{
+					Yii::app()->user->setFlash('Register','success');
+				}else{
+					Yii::app()->user->setFlash('Register','fail');
+				}	
 				$this->refresh();
 			}
 		}
-		$this->render('register',array('model'=>$model));
+		$this->render('register',array('model'=>$form));
 	}
 
 	public function actionLogin()

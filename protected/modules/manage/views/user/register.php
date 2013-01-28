@@ -9,7 +9,13 @@ $this->breadcrumbs=array(
 <?php if(Yii::app()->user->hasFlash('register')): ?>
 
 <div class="flash-success">
-	<?php echo Yii::app()->user->getFlash('register'); ?>
+	<?php $message = Yii::app()->user->getFlash('register'); 
+		  if ($message=='success'){
+		  	 echo '恭喜您，成为了HustTic的一名会员，让我们快乐地去享受我们的大学时间吧~';
+		  }	else if($message=='fail'){
+		  	echo '不好意思，注册好像出了点问题，请您稍后重试。';
+		  }
+	?>
 </div>
 
 <?php else: ?>
