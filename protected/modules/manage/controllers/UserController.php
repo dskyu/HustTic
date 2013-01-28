@@ -142,6 +142,12 @@ class UserController extends Controller
 	
 	public function actionRegister()
 	{
+		if (!Yii::app()->user->isGuest) 
+		{
+			Yii::app()->user->setFlash('index','registerlogin');
+			$this->redirect(Yii::app()->homeUrl.'manage/user');
+		}
+			
 		$form=new RegisterForm;
 		if(isset($_POST['RegisterForm']))
 		{
@@ -156,11 +162,13 @@ class UserController extends Controller
 					$loginForm->username = $form->attributes['username'];
 					$loginForm->password = $form->attributes['password'];
 					$loginForm->login();
-					Yii::app()->user->setFlash('register','success');
+					Yii::app()->user->setFlash('index','registersuccess');
+					$this->redirect(Yii::app()->homeUrl.'manage/user');
 				}else{
 					Yii::app()->user->setFlash('register','fail');
+					$this->refresh();
 				}	
-				$this->refresh();
+				
 			}
 		}
 		$this->render('register',array('model'=>$form));

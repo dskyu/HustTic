@@ -23,11 +23,10 @@ class RegisterForm extends CFormModel
 			array('username, email, password, password_confirm, nickname,birthday,tel,qq', 'required'),
 			array('username, password, nickname','length','min'=>6),
 			array('username, password, nickname','length','max'=>20),
-			array('password_confirm','compare','compareAttribute'=>'password'),
 			array('tel,qq','numerical','integerOnly'=>true),
 			array('email', 'email'),
-			// verifyCode needs to be entered correctly
 			array('verifyCode', 'captcha', 'allowEmpty'=>!CCaptcha::checkRequirements()),
+			array('password_confirm','compare','compareAttribute'=>'password','message'=>'两次输入的密码不一样'),
 		);
 	}
 
@@ -39,7 +38,16 @@ class RegisterForm extends CFormModel
 	public function attributeLabels()
 	{
 		return array(
-			'verifyCode'=>'Verification Code',
+			'username'=>'用户名',
+			'password'=>'密码',
+			'password_confirm'=>'密码确认',
+			'email'=>'邮箱',
+			'nickname'=>'昵称',
+			'birthday'=>'生日',
+			'tel'=>'电话',
+			'qq'=>'QQ',
+			'sex'=>'性别',
+			'verifyCode'=>'验证码',
 		);
 	}
 }

@@ -35,7 +35,7 @@ $this->breadcrumbs=array(
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'usernamea'); ?>
+		<?php echo $form->labelEx($model,'username'); ?>
 		<?php echo $form->textField($model,'username'); ?>
 		<?php echo $form->error($model,'username'); ?>
 	</div>
@@ -73,7 +73,7 @@ $this->breadcrumbs=array(
 	<div class="row">
 		<?php echo $form->labelEx($model,'sex'); ?>
 		<?php echo $form->radioButtonList($model,'sex', 
-					array('2'=>'中性','1'=>'男','0'=>'女'), array('separator'=>'&nbsp;')); ?>
+					array('0'=>'中性','1'=>'男','2'=>'女'), array('separator'=>'&nbsp;')); ?>
 		<?php echo $form->error($model,'sex'); ?>
 	</div>
 

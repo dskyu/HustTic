@@ -113,11 +113,11 @@ CREATE TABLE IF NOT EXISTS `tic_user` (
   `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `nickname` varchar(255) NOT NULL,
-  `level` int(1) DEFAULT '0',
+  `level` int(1) NOT NULL DEFAULT '0',
   `description` text,
-  `group_id` int(11) NOT NULL,
+  `group_id` int(11) NOT NULL DEFAULT '0',
   `birthday` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `sex` tinyint(1) NOT NULL,
+  `sex` tinyint(1) NOT NULL DEFAULT  '0',
   `otherskill` varchar(255) DEFAULT NULL,
   `thumbnail_url` varchar(255) DEFAULT NULL,
   `ori_url` varchar(255) DEFAULT NULL,
@@ -127,7 +127,7 @@ CREATE TABLE IF NOT EXISTS `tic_user` (
   `qq` varchar(255) DEFAULT NULL,
   `tel` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
 
 INSERT INTO `tic_user` (`id`, `username`, `password`, `nickname`, `level`, `description`, `group_id`, `birthday`, `sex`, `otherskill`, `thumbnail_url`, `ori_url`, `hobby`, `weibo`, `renren`, `qq`, `tel`) VALUES
 (1, '111', '432', '', 0, NULL, 12, '2013-01-26 15:48:21', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '111'),
@@ -136,7 +136,12 @@ INSERT INTO `tic_user` (`id`, `username`, `password`, `nickname`, `level`, `desc
 (4, '111', '432', '', 0, NULL, 12, '2013-01-26 15:50:15', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '111'),
 (5, '111', '432', '', 0, NULL, 12, '2013-01-26 15:50:16', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '111'),
 (6, '111', '432', '', 0, NULL, 12, '2013-01-26 15:50:17', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '111'),
-(7, '111', '432', '', 0, NULL, 12, '2013-01-26 15:50:18', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '111');
+(7, '111', '432', '', 0, NULL, 12, '2013-01-26 15:50:18', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '111'),
+(8, 'abc111', '111111', '111111', 0, NULL, 0, '2011-10-31 16:00:00', 1, NULL, NULL, NULL, NULL, NULL, NULL, '11111', '11111'),
+(9, 'abc11111', '96e79218965eb72c92a549dd5a330112', '11111111', 0, NULL, 0, '2011-11-10 16:00:00', 2, NULL, NULL, NULL, NULL, NULL, NULL, '11111', '11111'),
+(10, 'abcaaaa', '96e79218965eb72c92a549dd5a330112', '111111', 0, NULL, 0, '2011-10-31 16:00:00', 1, NULL, NULL, NULL, NULL, NULL, NULL, '1111', '1111'),
+(11, 'abcfdsafds', '96e79218965eb72c92a549dd5a330112', '111111', 0, NULL, 0, '2011-10-31 16:00:00', 0, NULL, NULL, NULL, NULL, NULL, NULL, '1111', '1111'),
+(12, 'ewerfeawfd', '96e79218965eb72c92a549dd5a330112', '111111', 0, NULL, 0, '2011-10-31 16:00:00', 0, NULL, NULL, NULL, NULL, NULL, NULL, '1111', '1111');
 
 -- --------------------------------------------------------
 

@@ -1,4 +1,5 @@
 <?php
+$this->pageTitle=Yii::app()->name . ' - 查看';
 $this->breadcrumbs=array(
 	'Users'=>array('index'),
 	$model->id,
