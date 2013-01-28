@@ -2,6 +2,22 @@
 
 class UserController extends Controller
 {
+	public function actions()
+	{
+		return array(
+		
+			'captcha'=>array(
+				'class'=>'CCaptchaAction',
+				'backColor'=>0xFFFFFF,
+			),
+			// page action renders "static" pages stored under 'protected/views/site/pages'
+			// They can be accessed via: index.php?r=site/page&view=FileName
+			'page'=>array(
+				'class'=>'CViewAction',
+			),
+		);
+	}
+	
 	/**
 	 * @return array action filters
 	 */
@@ -125,7 +141,17 @@ class UserController extends Controller
 	
 	public function actionRegister()
 	{
-		$this->render('register');
+		$model=new RegisterForm;
+		if(isset($_POST['RegisterForm']))
+		{
+			$model->attributes=$_POST['RegisterForm'];
+			if($model->validate())
+			{
+				Yii::app()->user->setFlash('Register','Thank you for contacting us. We will respond to you as soon as possible.');
+				$this->refresh();
+			}
+		}
+		$this->render('register',array('model'=>$model));
 	}
 
 	public function actionLogin()
