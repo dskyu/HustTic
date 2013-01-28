@@ -149,13 +149,16 @@ class UserController extends Controller
 			if($form->validate())
 			{
 				$model=new User;
-				$_POST['RegisterForm']['password']=md5($_POST['RegisterForm']);
+				$_POST['RegisterForm']['password']=md5($_POST['RegisterForm']['password']);
 				$model->attributes=$_POST['RegisterForm'];
-				if ($model->save())
-				{
-					Yii::app()->user->setFlash('Register','success');
+				if ($model->save()){
+					$loginForm = new LoginForm();
+					$loginForm->username = $form->attributes['username'];
+					$loginForm->password = $form->attributes['password'];
+					$loginForm->login();
+					Yii::app()->user->setFlash('register','success');
 				}else{
-					Yii::app()->user->setFlash('Register','fail');
+					Yii::app()->user->setFlash('register','fail');
 				}	
 				$this->refresh();
 			}

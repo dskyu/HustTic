@@ -19,7 +19,7 @@ class RegisterForm extends CFormModel
 	public function rules()
 	{
 		return array(
-			// name, email, subject and body are required
+		//	array('username, password, password_confirm','required'),
 			array('username, email, password, password_confirm, nickname,birthday,tel,qq', 'required'),
 			array('username, password, nickname','length','min'=>6),
 			array('username, password, nickname','length','max'=>20),
@@ -27,7 +27,7 @@ class RegisterForm extends CFormModel
 			array('tel,qq','numerical','integerOnly'=>true),
 			array('email', 'email'),
 			// verifyCode needs to be entered correctly
-		//	array('verifyCode', 'captcha', 'allowEmpty'=>!CCaptcha::checkRequirements()),
+			array('verifyCode', 'captcha', 'allowEmpty'=>!CCaptcha::checkRequirements()),
 		);
 	}
 

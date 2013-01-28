@@ -4,7 +4,6 @@ $this->breadcrumbs=array(
 	'Register',
 );
 ?>
-<h1>Register</h1>
 
 <?php if(Yii::app()->user->hasFlash('register')): ?>
 
@@ -20,6 +19,7 @@ $this->breadcrumbs=array(
 
 <?php else: ?>
 
+<h1>Register</h1>
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
